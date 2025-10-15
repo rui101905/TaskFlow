@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# TaskFlow - Task Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, responsive Task Management Application built with React Functional Components, React Hooks, React Router, and Bootstrap.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Tasks**: Create new tasks with title, description, and priority level
+- **View Tasks**: Display all tasks in a responsive card layout
+- **Delete Tasks**: Remove tasks with confirmation dialog
+- **Priority Management**: Visual priority indicators (High, Medium, Low)
+- **Responsive Design**: Mobile-friendly interface using Bootstrap
+- **Navigation**: Easy navigation between Home and Add Task views
 
-### `npm start`
+## Technical Requirements Met
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ **Functional Components**: All components use React Functional Components (no Class Components)  
+✅ **State Management**: Uses `useState` and other React Hooks for state management  
+✅ **Routing**: Implements `react-router-dom` for navigation between views  
+✅ **Styling**: Uses Bootstrap and React-Bootstrap for responsive styling  
+✅ **GitHub Integration**: Ready for version control and collaborative development  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+src/
+├── App.js                 # Main application component with global state
+├── App.css               # Custom styles
+├── components/
+│   ├── Navbar.js         # Navigation component
+│   ├── TaskListView.js   # Task list display component
+│   └── AddTaskView.js    # Add task form component
+└── index.js              # Application entry point
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation & Setup
 
-### `npm run build`
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd TaskFlow
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-### `npm run eject`
+## Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React**: ^19.1.1
+- **React Router DOM**: For navigation
+- **Bootstrap**: ^5.x for styling
+- **React Bootstrap**: For Bootstrap components
+- **React Router Bootstrap**: For Bootstrap navigation components
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Task Breakdown (5 Tasks Completed)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Task 1: Project Setup & Bootstrap Integration ✅
+- Initialized React project
+- Integrated Bootstrap and React-Bootstrap
+- Created responsive Header/Navbar with navigation links
+- Set up project structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Task 2: Routing & Application Shell ✅
+- Implemented `react-router-dom` for navigation
+- Created routes for `/` (Home) and `/add` (Add Task)
+- Built shell components for TaskListView and AddTaskView
 
-## Learn More
+### Task 3: Global State Management ✅
+- Implemented global task state using `useState` in App.js
+- Created `addTask()` and `deleteTask()` functions
+- Passed functions to components via props
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Task 4: Add Task Form Component ✅
+- Built AddTaskView component with Bootstrap form
+- Captures Task Title, Description, and Priority
+- Handles form submission and navigation
+- Includes form validation and error handling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Task 5: Task List Component ✅
+- Created TaskListView component with responsive Bootstrap cards
+- Displays tasks with priority indicators
+- Implements delete functionality with confirmation
+- Shows empty state when no tasks exist
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **View Tasks**: Navigate to the home page to see all your tasks
+2. **Add Task**: Click "Add New Task" button or navigate to `/add`
+3. **Fill Form**: Enter task title (required), description (optional), and select priority
+4. **Submit**: Click "Add Task" to save and return to home
+5. **Delete Task**: Click the "Delete" button on any task card
 
-### Analyzing the Bundle Size
+## Features in Detail
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Task Properties
+- **ID**: Auto-generated unique identifier
+- **Title**: Required task title
+- **Description**: Optional task description
+- **Priority**: High (red), Medium (yellow), Low (green)
+- **Created Date**: Automatic timestamp
 
-### Making a Progressive Web App
+### Responsive Design
+- Mobile-first approach
+- Responsive grid layout
+- Bootstrap components for consistent styling
+- Priority color coding with visual indicators
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### State Management
+- Global state in App.js using `useState`
+- Props drilling for component communication
+- Immutable state updates
+- Local component state for forms
 
-### Advanced Configuration
+## Development Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- All components are functional components using React Hooks
+- No class components used anywhere in the codebase
+- Bootstrap classes used for responsive design
+- React Router for client-side navigation
+- Form validation and error handling implemented
+- Confirmation dialogs for destructive actions
 
-### Deployment
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Edit task functionality
+- Task filtering and sorting
+- Local storage persistence
+- Task categories/tags
+- Due dates and reminders
+- User authentication
+- Task sharing and collaboration
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
